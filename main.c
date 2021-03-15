@@ -10,7 +10,7 @@
 int main(void)
 {
 	int len;
-	int len2;
+	int len2, len3;
 	unsigned int ui;
 	void *addr;
 
@@ -39,6 +39,7 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n", "I am a string !");
-	_printf("%R\n", "");
+	len3 = _printf("%R\n", "ABC");
+	_printf("%d\n", len3);
 	return (0);
 }
