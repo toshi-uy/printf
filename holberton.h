@@ -31,7 +31,8 @@ int print_hexa_low(va_list list);
 int print_hexa_upper(va_list list);
 int print_str_non_print(va_list list);
 
-
+int _strlen(char *);
+int print_str_rev(va_list list);
 int _putchar(char);
 int num_lenght(int n);
 int num_lenght_uns(unsigned int n);

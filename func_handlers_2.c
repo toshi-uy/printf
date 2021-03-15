@@ -1,6 +1,22 @@
 #include "holberton.h"
 
 /**
+ * _print_rev_recursion - Entry point
+ * @s: string to modify
+ *
+ * Return: pointer to memory area s
+ */
+
+void _print_rev_recursion(char *s)
+{
+        if (*s != 0)
+        {
+                _print_rev_recursion(s + 1);
+                _putchar(*s);
+        }
+}
+
+/**
  * print_str_rev - print string everything that is not %
  * @list: start of string.
  * Return: string length for count.
@@ -13,25 +29,10 @@ int print_str_rev(va_list list)
 	aux = va_arg(list, char*);
 	if (!aux)
 		return (0);
-	rev_recursion(aux);
+	_print_rev_recursion(aux);
 	return (_strlen(aux));
 }
 
-/**
- * _print_rev_recursion - Entry point
- * @s: string to modify
- *
- * Return: pointer to memory area s
- */
-
-void _print_rev_recursion(char *s)
-{
-	if (*s != 0)
-	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
-	}
-}
 
 /**
  * _strlen - entry point

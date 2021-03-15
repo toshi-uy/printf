@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 		{"i", print_int}, {"b", print_to_binar}, {"%", print_percent},
 		{"u", print_uns}, {"o", print_octal}, {"x", print_hexa_low},
 		{"X", print_hexa_upper}, {"S", print_str_non_print},
-		{NULL, NULL},
+		{"r", print_str_rev}, {NULL, NULL},
 	};
 	int indx_type, iter = 0, pos1 = 0, pos2, count = 0;
 	va_list list;
