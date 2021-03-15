@@ -147,5 +147,5 @@ int print_str_non_print(va_list list)
 			_putchar(*s_aux);
 		s_aux++;
 	}
-	return (strlen(s_aux) + count);
+	return (_strlen(s_aux) + count);
 }

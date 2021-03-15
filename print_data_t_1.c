@@ -30,7 +30,7 @@ int print_char_2(va_list list)
 		return (0);
 	}
 	_puts(s_aux); /*Funcion que imprime strings con putchar*/
-	return (strlen(s_aux));
+	return (_strlen(s_aux));
 }
 
 /**
@@ -71,4 +71,3 @@ int print_percent(va_list list __attribute__((unused)))
 	_putchar('%');
 	return (1);
 }
-
