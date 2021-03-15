@@ -114,7 +114,7 @@ int print_str_non_print(va_list list)
 
 	s_aux = va_arg(list, char*);
 	if (!s_aux)
-		return (0);
+		s_aux = "(null)";
 	while (*s_aux)
 	{
 		if ((*s_aux > 0 && *s_aux < 32) || (*s_aux >= 127))
