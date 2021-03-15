@@ -69,7 +69,7 @@ int print_rot13(va_list list)
 
 	s = va_arg(list, char*);
 	if (!s)
-		return (0);
+		s = "(null)";
 	rot13(s);
 	return (_strlen(s));
 }
