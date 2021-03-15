@@ -41,5 +41,6 @@ int main(void)
 	_printf("Unknown:[%r]\n", "I am a string !");
 	len3 = _printf("%R\n", "ABC");
 	_printf("%d\n", len3);
+	_printf("%p\n", &addr);
 	return (0);
 }

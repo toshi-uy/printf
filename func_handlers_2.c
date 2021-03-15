@@ -51,7 +51,7 @@ void rot13(char *s)
 			if (s[i] == m[j])
 			{
 				_putchar(n[j]);
-				break;
+				j = 53;
 			}
 		}
 	}
@@ -71,22 +71,5 @@ int print_rot13(va_list list)
 	if (!s)
 		s = "(null)";
 	rot13(s);
-	return (_strlen(s));
-}
-
-/**
- * print_adress - print string everything that is not %
- * @list: start of string.
- * Return: string length for count.
- */
-int print_adress(va_list list)
-{
-	char *s;
-
-	s = va_arg(list, char*);
-	if (!s)
-		return (0);
-	for (; s != '\0'; s++)
-		_putchar(*s);
 	return (_strlen(s));
 }
