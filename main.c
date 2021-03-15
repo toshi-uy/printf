@@ -39,5 +39,7 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n", "I am a string !");
+	_printf("%%s\n", "kiko");
+	printf("%%s\n", "kiko");
 	return (0);
 }
