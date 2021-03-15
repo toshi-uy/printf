@@ -1,4 +1,3 @@
-
 #ifndef prinf_function
 #define prinf_function
 
@@ -37,7 +36,11 @@ int _putchar(char);
 int num_lenght(int n);
 int num_lenght_uns(unsigned int n);
 
-
+/**
+ * struct datatype - Typedef for struct
+ * @type: first member
+ * @func: second member
+ */
 
 typedef struct datatype
 {
