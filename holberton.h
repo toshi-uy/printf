@@ -37,7 +37,7 @@ int _putchar(char);
 int num_lenght(int n);
 int num_lenght_uns(unsigned int n);
 int print_rot13(va_list list);
-int print_adress(va_list list);
+/*int print_adress(va_list list);*/
 
 /**
  * struct datatype - Typedef for struct
