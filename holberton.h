@@ -1,3 +1,4 @@
+
 #ifndef prinf_function
 #define prinf_function
 
@@ -18,8 +19,6 @@ void _puts(char *str);
 int print_number(int n);
 int change_to_binary(int k);
 int print_number_uns(unsigned int n);
-
-unsigned int change_to_octal(unsigned int n);
 
 int print_char(va_list list);
 int print_char_2(va_list list);

@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include "print_data_t_2.c"
-#include "prints_data_t_1.c"
+#include "print_data_t_1.c"
 #include "func_handlers_2.c"
 #include "func_handlers_1.c"
 #include "aux_funcs.c"
@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			{
 				if (*type[indx_type].type == format[iter])
 					count += type[indx_type].func(list);
-				indx_type++;
+			indx_type++;
 			}
 		}
 		else
@@ -54,3 +54,28 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (count);
 }
+/*
+int main()
+{
+
+    char ch = 'a';
+    char *str;
+    char *str2;
+    str2 = "wopa";
+    str = "Hola";
+	int aux = _printf("A%cB%sC%sD8\n", ch, str, str2);
+	printf ("\n");
+    printf("%d", aux);
+	printf ("\n");
+	int aux2 = _printf("alo98");
+	printf ("\n");
+    printf("%d", aux2);
+	printf ("\n");
+	int aux3 = _printf("aguada%c%s%s", ch, str, str2);
+	printf ("\n");
+    printf("%d", aux3);
+	printf ("\n");
+
+    return (0);
+}
+*/

@@ -12,12 +12,6 @@ int print_uns(va_list list)
 	return (print_number_uns(va_arg(list, int)));
 }
 
-/**
- * print_octal - print unsigned integer
- * @list: string to print.
- *
- * Return: Calls function that prints any unsigned number.
- */
 int print_octal(va_list list)
 {
 	int i = 0, count = 0;
@@ -105,11 +99,11 @@ int print_str_non_print(va_list list)
 	s_aux = va_arg(list, char*);
 	if (!s_aux)
 		return (0);
-	while (s_aux)
+	while (*s_aux)
 	{
-		if ((s_aux > 0 && s_aux < 32) || (s_aux >= 127))
+		if ((*s_aux > 0 && *s_aux < 32) || (*s_aux >= 127))
 		{
-			decnum = s_aux;
+			decnum = (int)*s_aux;
 			while(decnum != 0)
 			{
 				rem = decnum % 16;
@@ -121,17 +115,21 @@ int print_str_non_print(va_list list)
 				i++;
 				decnum = decnum / 16;
 			}
-			for(i = i - 1; i >= 0; i--)
+			_putchar(92);
+			_putchar('x');
+			i = i -1;
+            if (i < 1)
+                _putchar('0');
+			for(; i >= 0; i--)
 			{
 				_putchar(hexnum[i]);
 				count++;
 			}
+			i = 0;
 		}
 		else
-		{
 			_putchar(*s_aux);
-			s_aux++;
-		}
+    s_aux++;
 	}
 	return (strlen(s_aux) + count);
 }

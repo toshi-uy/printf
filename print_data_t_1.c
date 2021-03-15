@@ -65,8 +65,9 @@ int print_to_binar(va_list list)
  * Return: % char length for count.
  */
 
-int print_percent(va_list list)
+int print_percent(va_list list __attribute__((unused)))
 {
 	_putchar('%');
 	return (1);
 }
+
