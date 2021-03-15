@@ -11,13 +11,15 @@ int _printf(const char *format, ...)
 		{"c", print_char}, {"s", print_char_2}, {"d", print_int},
 		{"i", print_int}, {"b", print_to_binar}, {"%", print_percent},
 		{"u", print_uns}, {"o", print_octal}, {"x", print_hexa_low},
-		{"X", print_hexa_upper}, {"S", print_str_non_print},
+		{"X", print_hexa_upper}, {"S", print_str_non_print}, {"p", print_adress},
 		{"r", print_str_rev}, {"R", print_rot13}, {NULL, NULL},
 	};
 	int indx_type, iter = 0, pos1 = 0, pos2, count = 0;
 	va_list list;
 
 	va_start(list, format);
+	if (!format)
+		return (-1);
 	while (format && format[iter])
 	{
 		while (format[iter] && format[iter] != '%')
