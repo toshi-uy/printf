@@ -32,23 +32,3 @@ int print_str_rev(va_list list)
 	_print_rev_recursion(aux);
 	return (_strlen(aux));
 }
-
-
-/**
- * _strlen - entry point
- * @s: string to find length
- * Return: length
- *
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != 0)
-	{
-		s++;
-		len++;
-	}
-	return (len);
-}
