@@ -27,7 +27,7 @@ int print_char_2(va_list list)
 	s_aux = va_arg(list, char*);
 	if (!s_aux)
 	{
-		return (0);
+		s_aux = "(null)";
 	}
 	_puts(s_aux); /*Funcion que imprime strings con putchar*/
 	return (_strlen(s_aux));
