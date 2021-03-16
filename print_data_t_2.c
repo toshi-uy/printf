@@ -130,11 +130,11 @@ int print_str_non_print(va_list list)
 	s_aux = va_arg(list, char*);
 	if (!s_aux)
 		s_aux = "(null)";
-	while (*s_aux)
+	while (s_aux[cont])
 	{
-		if ((*s_aux > 0 && *s_aux < 32) || (*s_aux >= 127))
+		if ((s_aux[cont] > 0 && s_aux[cont] < 32) || (s_aux[cont] >= 127))
 		{
-			decnum = (int)*s_aux;
+			decnum = (int)s_aux[cont];
 			while (decnum != 0)
 			{
 				rem = decnum % 16;
@@ -149,18 +149,18 @@ int print_str_non_print(va_list list)
 			_putchar(92);
 			_putchar('x');
 			i = i - 1;
-		if (i < 1)
-			_putchar('0');
+			if (i < 1)
+				_putchar('0');
 			for (; i >= 0; i--)
 			{
 				_putchar(hexnum[i]);
-				count++;
 			}
 			i = 0;
+			count += 3;
 		}
 		else
-			_putchar(*s_aux);
-		s_aux++;
+			_putchar(s_aux[cont]);
+		cont++;
 	}
-	return (_strlen(s_aux) + count);
+	return (cont + count);
 }
