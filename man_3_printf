@@ -43,8 +43,14 @@ After a '%' is reached in the string, check if the next character is:
 .PP
 .B X - Prints hexadecimal uppercase
 .PP
-.B S - Pritns the string (Non printable characters (0 < ASCII value < 32 or >= 127))
+.B S - Prints the string (Non printable characters (0 < ASCII value < 32 or >= 127))
 are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+.PP
+.B r - Prints the reversed string
+.PP
+.B R - Prints the rot13'ed string
+.PP
+.B p - Prints the pointer type data
 .PP
 .SH RETURN VALUE
 The _printf function returns the number of characters printed (except the null byte used to end strings)
