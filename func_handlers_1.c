@@ -56,21 +56,6 @@ int print_number(int n)
 }
 
 /**
- * change_to_binary - change decimal number to binary
- * @n: string to print.
- *
- * Return: binary number
- */
-int change_to_binary(unsigned int n)
-{
-	if (n == 0)
-		return (0);
-	if (n == 1)
-		return (1);
-	return ((n % 2) + 10 * change_to_binary(n / 2));
-}
-
-/**
  * print_number_uns - prints unsigned numbers
  * @n: string to print.
  *

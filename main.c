@@ -40,8 +40,8 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n", "I am a string !");
 	_printf("ABC in rot13: %R\n", "ABC");
-	_printf("%b\n", 98);
-	len3 = _printf("%b\n", 98);
+	_printf("%b\n", ui);
+	len3 = _printf("%b\n", 29);
 	_printf("%d\n", len3);
 	return (0);
 }

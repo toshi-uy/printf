@@ -54,10 +54,29 @@ int print_int(va_list list)
 
 int print_to_binar(va_list list)
 {
-	unsigned int n;
+	int i = 0, count = 0;
+	int binnum[100];
+	unsigned int n = va_arg(list, unsigned int);
+	unsigned int aux;
 
-	n = change_to_binary(va_arg(list, unsigned int));
-	return (print_number(n));
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	while (n > 0)
+	{
+		aux = n % 2;
+		binnum[i] = aux;
+		i++;
+		n = n / 2;
+	}
+	for (i = i - 1; i >= 0; i--)
+	{
+		_putchar(binnum[i] + '0');
+		count++;
+	}
+	return (count);
 }
 
 /**
