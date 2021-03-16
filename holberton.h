@@ -12,7 +12,6 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-
 void print_str(int pos1, int pos2, const char *format);
 void _puts(char *str);
 int print_number(int n);
@@ -48,5 +47,5 @@ typedef struct datatype
 	int (*func)(va_list list);
 } data_t;
 
-
+int functions(const char *format, data_t type[],  va_list list);
 #endif
