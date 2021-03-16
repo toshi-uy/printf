@@ -44,7 +44,7 @@ int functions(const char *format, data_t type[], va_list list)
 		if (format[iter] != '%')
 		{
 			_putchar(format[iter]);
-                        count++;
+			count++;
 		}
 		if (format[iter] == '%')
 		{
