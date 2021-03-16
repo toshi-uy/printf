@@ -35,7 +35,7 @@ int print_str_rev(va_list list)
 
 /**
  * print_rot13 - print string everything that is not %
- * @s: start of string.
+ * @list: start of string.
  * Return: string length for count.
  */
 int print_rot13(va_list list)
@@ -45,7 +45,7 @@ int print_rot13(va_list list)
 	int i, j;
 	char *s;
 
-        s = va_arg(list, char*);
+	s = va_arg(list, char*);
 	if (!s)
 		return (-1);
 	for (i = 0; s[i] != 0; i++)
