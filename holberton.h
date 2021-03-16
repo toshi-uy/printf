@@ -33,18 +33,16 @@ int print_str_non_print(va_list list);
 
 int _strlen(char *);
 int print_str_rev(va_list list);
-int _putchar(char);
+int _putchar(char c);
 int num_lenght(int n);
 int num_lenght_uns(unsigned int n);
 int print_rot13(va_list list);
-/*int print_adress(va_list list);*/
 
 /**
  * struct datatype - Typedef for struct
  * @type: first member
  * @func: second member
  */
-
 typedef struct datatype
 {
 	char *type;
