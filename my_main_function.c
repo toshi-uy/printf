@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		if (format[iter])
 		{
 			if (format[iter + 1] == '\0')
-                                return (-1);
+				return (-1);
 			pos1 = pos2 + 3;
 			indx_type = 0;
 			iter++;
