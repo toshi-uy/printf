@@ -29,7 +29,7 @@ int print_char_2(va_list list)
 	{
 		s_aux = "(null)";
 	}
-	_puts(s_aux); /*Funcion que imprime strings con putchar*/
+	_puts(s_aux);
 	return (_strlen(s_aux));
 }
 
@@ -54,8 +54,9 @@ int print_int(va_list list)
 
 int print_to_binar(va_list list)
 {
-	int n = change_to_binary(va_arg(list, int));
+	int n;
 
+	n = change_to_binary(va_arg(list, int));
 	return (print_number(n));
 }
 
