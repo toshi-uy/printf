@@ -47,7 +47,7 @@ int print_rot13(va_list list)
 
         s = va_arg(list, char*);
 	if (!s)
-		s = "(null)";
+		return (-1);
 	for (i = 0; s[i] != 0; i++)
 	{
 		for (j = 0; m[j] != '\0'; j++)
@@ -55,7 +55,7 @@ int print_rot13(va_list list)
 			if (s[i] == m[j])
 			{
 				_putchar(n[j]);
-				j = 53;
+				break;
 			}
 		}
 		if (!m[j])
