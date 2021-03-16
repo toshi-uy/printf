@@ -61,7 +61,7 @@ int print_number(int n)
  *
  * Return: binary number
  */
-int change_to_binary(int n)
+int change_to_binary(unsigned int n)
 {
 	if (n == 0)
 		return (0);
