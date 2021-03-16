@@ -34,16 +34,20 @@ int print_str_rev(va_list list)
 }
 
 /**
- * rot13 - print string everything that is not %
+ * print_rot13 - print string everything that is not %
  * @s: start of string.
  * Return: string length for count.
  */
-void rot13(char *s)
+int print_rot13(va_list list)
 {
 	char m[53] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char n[53] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
+	char *s;
 
+        s = va_arg(list, char*);
+	if (!s)
+		s = "(null)";
 	for (i = 0; s[i] != 0; i++)
 	{
 		for (j = 0; m[j] != '\0'; j++)
@@ -54,22 +58,8 @@ void rot13(char *s)
 				j = 53;
 			}
 		}
+		if (!m[j])
+			_putchar(s[i]);
 	}
-}
-
-/**
- * print_rot13 - print string everything that is not %
- * @list: start of string.
- * Return: string length for count.
- */
-
-int print_rot13(va_list list)
-{
-	char *s;
-
-	s = va_arg(list, char*);
-	if (!s)
-		s = "(null)";
-	rot13(s);
 	return (_strlen(s));
 }
