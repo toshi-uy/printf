@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			{
 				if (*type[indx_type].type == format[iter])
 					count += type[indx_type].func(list);
-			indx_type++;
+				indx_type++;
 			}
 		}
 		else

@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int len, len3;
+	int len;
 	int len2;
 	unsigned int ui;
 	void *addr;
@@ -40,8 +40,7 @@ int main(void)
 	printf("Len:[%d]\n", len2);
 	_printf("Unknown:[%r]\n", "I am a string !");
 	_printf("ABC in rot13: %R\n", "ABC");
-	_printf("%b\n", ui);
-	len3 = _printf("%b\n", 29);
-	_printf("%d\n", len3);
+	_printf("Unknown:[%t]\n");
+	printf("Unknown:[%t]\n");
 	return (0);
 }
