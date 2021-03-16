@@ -121,10 +121,11 @@ int print_hexa_upper(va_list list)
  * @list: string to print
  * Return: Always 0 (Success)
  */
+
 int print_str_non_print(va_list list)
 {
 	char *s_aux;
-	int rem, decnum, count = 0, i = 0;
+	int rem, decnum, i = 0, cont = 0, count = 0;
 	int hexnum[100];
 
 	s_aux = va_arg(list, char*);
