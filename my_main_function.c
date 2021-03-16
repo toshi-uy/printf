@@ -22,6 +22,8 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	while (format && format[iter])
 	{
+		if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
 		while (format[iter] && format[iter] != '%')
 			iter++;
 		pos2 = iter - 1;
