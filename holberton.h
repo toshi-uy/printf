@@ -12,7 +12,6 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-void print_str(int pos1, int pos2, const char *format);
 void _puts(char *str);
 int print_number(int n);
 int print_number_uns(unsigned int n);
