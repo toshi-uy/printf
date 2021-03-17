@@ -135,5 +135,5 @@ Understanding the code is very important, that's why we produced this workflow i
 
 ## Group
 
-[**Facundo Calixto**](https://github.com/Francisco-Calixto-HolbertonSchool)
+[**Francisco Calixto**](https://github.com/Francisco-Calixto-HolbertonSchool)
 [**Toshi Borgia**](https://github.com/toshi-uy)
