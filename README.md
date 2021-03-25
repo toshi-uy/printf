@@ -6,7 +6,7 @@
 ````
 
 ## Introduction
-This is the Readme file for our group proyect that consists on replicating various aspects of the stdio.h library function [printf()](https://linux.die.net/man/3/printf) which we are calling _printf().
+This is the Readme file for our group project that consists on replicating various aspects of the stdio.h library function [printf()](https://linux.die.net/man/3/printf) which we are calling _printf().
 The function write the output under the control of a  _format_ string that specifies how subsequent arguments (or arguments accessed via the variable-length argument facilities of [stdarg(3)](https://man7.org/linux/man-pages/man3/stdarg.3.html)) are converted for output.
        
 The format string is a character string, beginning and ending in its initial shift state, if any.  The format string is composed of zero or more directives: ordinary characters (not **%**), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.  Each conversion specification is introduced by the character **%**, and ends with a _conversion_ _specifier_.
